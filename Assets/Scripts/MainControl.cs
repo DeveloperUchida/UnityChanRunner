@@ -25,8 +25,9 @@ public class MainControl : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal"); //A/D
         float v = Input.GetAxis("Vertical"); //W/S
-
-        //移動処理
+        //回転処理
+        transform.Rotate(0,h* 100 * Time.deltaTime,0);
+        //前移動処理
         Vector3 move = new Vector3(h, 0, v) * moveSpeed * Time.deltaTime;
         transform.Translate(move);
 
