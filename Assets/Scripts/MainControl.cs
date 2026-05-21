@@ -41,7 +41,7 @@ public class MainControl : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGround)
         {
             rigidbody.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            amimator.SetBool("jump", true);
+            amimator.SetBool("Jump", true);
             isGround = false;
         }
     }
@@ -51,7 +51,7 @@ public class MainControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGround = true;
-            amimator.SetBool("jump", false);
+            amimator.SetBool("Jump", false);
         }
     }
 }
