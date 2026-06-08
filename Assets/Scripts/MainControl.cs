@@ -34,6 +34,8 @@ public class MainControl : MonoBehaviour
         //アニメーション制御
 
         float Speed = new Vector2(h, v).magnitude;
+        // vがマイナス（後退）のときはSpeedをマイナスにする
+        if(v<0) Speed = -Speed;
         amimator.SetFloat("Speed", Speed);
         amimator.SetFloat("Direction", h);
 
